@@ -1,808 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Ninestars Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBridge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/techbridge/logo.png" rel="icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003B73;;
+            --primary-orange: #FF7A41;
+        }
 
-  <!-- =======================================================
-  * Template Name: Ninestars
-  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            padding: 15px 0;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .header .logo img {
+            max-height: 50px;
+            margin-right: 6px;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+        }
+
+        .search-box {
+            max-width: 400px;
+            position: relative;
+        }
+
+        .search-box input {
+            padding-right: 50px;
+            border-radius: 25px;
+        }
+
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            border-radius: 20px;
+            background: var(--primary-blue);
+        }
+
+        .skill-tags {
+            margin: 20px 0;
+        }
+
+        .skill-tag {
+            background: #f8f9fa;
+            padding: 5px 15px;
+            border-radius: 2px;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .who-can-join {
+            padding: 60px 0;
+        }
+
+        .join-card {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .join-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .popular-courses {
+            padding: 60px 0;
+        }
+
+        .course-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .course-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .mentors-section {
+            padding: 60px 0;
+        }
+
+        .mentor-card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .mentor-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .partnerships {
+            padding: 60px 0;
+        }
+
+        .partner-logo {
+            height: 100px;
+            width: 100px;
+            object-fit: contain;
+            margin: 50px;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .primary-btn {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 25px;
+        }
+
+        .primary-btn:hover {
+            background: #FF7A41;
+            color: white;
+        }
+
+        .newsletter-input {
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 2px;
+            padding: 0.5rem;
+        }
+
+        .newsletter-input::placeholder {
+            color: #fff;
+            opacity: 1;
+        }
+
+        .newsletter-btn {
+            background-color: var(--primary-orange);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .popular-courses .course-card {
+            position: relative;
+            background-color: var(--primary-blue);
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+            height: 300px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .popular-courses .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .popular-courses .inner-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .popular-courses .course-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background-color: transparent;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .popular-courses .info-box {
+            background-color: white;
+            padding: 8px;
+            border-radius: 15px;
+            text-align: center;
+            height: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .popular-courses .info-box h5 {
+            margin: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .popular-courses .info-box p {
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: center;
+        }
+        
+        .popular-courses .details-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        
+        .popular-courses .details-box {
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            height: 25px;
+            border: 1px solid #FF7A41;
+            margin: 5px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .popular-courses .primary-btn {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            background-color: #FF7A41;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+        
+        .popular-courses .primary-btn:hover {
+            background-color: #FF7A41;
+        }     .mentors-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .mentors-section h2 {
+            font-size: 2rem;
+        }
+        
+        .mentor-card {
+            position: relative;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mentor-card .badge {
+            position: absolute;
+            top: -10px;
+            left: 240px;
+            background: #FF7A41;
+            color: white;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        .mentor-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        
+        .mentor-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .mentor-role {
+            font-size: 20px;
+            color:#FF7A41;
+            margin-bottom: 10px;
+        }
+        
+        .rating {
+            font-size: 0.9rem;
+            color: grey;
+        }
+        
+        .details {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .mentor-description {
+            text-align: justify;
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 15px;
+        }
+           
+    </style>
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo_techbridge.jpg" alt="">
-        <!-- <h1 class="sitename">Ninestars</h1> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">Internship</a></li>
-          <li><a href="index.html#services">Learning Modules</a></li>
-          <li><a href="index.html#portfolio">FAQ</a></li>
-          <li><a href="index.html#portfolio">Contact</a></li>
-          <li><a href="index.html#portfolio">About</a></li>
-          <!-- <li><a href="index.html#team">Team</a></li> -->
-          <li class="dropdown"><a href="#"><span>Hub</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+<body>
+    <!-- header -->
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <img src="assets/img/techbridge/logo.png" alt="">
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="#">Internship</a></li>
+              <li><a href="#">Learning Modules</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
+              <li class="dropdown"><a href="#"><span>Hub</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li><a href="#">Dropdown 1</a></li>
+                  <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="#">Deep Dropdown 1</a></li>
+                      <li><a href="#">Deep Dropdown 2</a></li>
+                      <li><a href="#">Deep Dropdown 3</a></li>
+                      <li><a href="#">Deep Dropdown 4</a></li>
+                      <li><a href="#">Deep Dropdown 5</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dropdown 2</a></li>
+                  <li><a href="#">Dropdown 3</a></li>
+                  <li><a href="#">Dropdown 4</a></li>
                 </ul>
               </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
             </ul>
-          </li>
-          <!-- <li><a href="index.html#contact">Contact</a></li> -->
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Log In</a>
-      <a class="btn-getstarted" href="index.html#about">Register</a>
-
-    </div>
-  </header>
-
-  <main class="main">
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <a class="btn-getstarted" href="login.php">Log In</a>
+          <a class="btn-getstarted" href="register.php">Register</a>
+    
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="section hero light-background">
-
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-            <h1>Bettter digital experience with Ninestars</h1>
-            <p>We are team of talented designers making websites with Bootstrap</p>
-            <div class="d-flex">
-              <a href="index.html#about" class="btn-get-started">Get Started</a>
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #003B73;">TechBridge</h1>
+                    <p class="lead text-muted mb-8" style="font-size: 24px;">Connecting Learning, Skills, and Real-World Experience for Your Tech Career</p>
+                    <div class="input-group" style="margin-top: 10px; max-width: 400px;">
+                        <input type="text" class="form-control" placeholder="Search the course you want" style="border: 1px solid #ccc; padding: 10px; border-radius: 4px 0 0 4px;">
+                        <button class="btn" style="background-color: #003B73; border: none; padding: 10px 20px; color: #fff; border-radius: 0 4px 4px 0;">Search</button>
+                    </div>
+                    <div class="skill-tags" style="margin-top: 20px;">
+                        <span class="skill-tag">Software Engineer</span>
+                        <span class="skill-tag">DevOps Engineer</span>
+                        <span class="skill-tag">Data Analytics</span>
+                        <span class="skill-tag">UI/UX Designer</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/img/techbridge/heroaction.png" alt="Hero Image" class="img-fluid">
+                </div>
             </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/hero-img.svg" class="img-fluid animated" alt="">
-          </div>
         </div>
-      </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Content -->
+                <div class="col-lg-6">
+                    <h4 style="color:#FF7A41; font-weight:bold">W H O<span style="margin-left: 20px;">C A N</span><span style="margin-left: 20px;">J O I N</span></h4>
+                    <h4 class="display-5 fw-bold mb-4" style="color: #003B73;">Program Pengembangan Keterampilan untuk Semua</h4>
+                    <div class="row">
+                        <!-- Box 01 -->
+                        <div class="col-6 col-sm-5 text-center mb-4">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h3 style="font-family: Arial, Helvetica, sans-serif; font-weight:bold; color:#003B73; margin-right: 10px;">01</h3>
+                                <i class="fas fa-solid fa-city" style="color: #FF7A41; font-size:100px"></i>
+                            </div>
+                            <p style="font-size: 14px; margin-top: 10px; font-weight:bold">Mahasiswa atau Pemula Profesional</p>
+                        </div>
+                        <!-- Box 02 -->
+                        <div class="col-6 col-sm-5 text-center mb-4">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h3 style="font-family: Arial, Helvetica, sans-serif; font-weight:bold; color:#003B73; margin-right: 10px;">02</h3>
+                                <i class="fas fa-regular fa-user" style="color: #FF7A41; font-size:100px"></i>
+                            </div>
+                            <p style="font-size: 14px; margin-top: 10px; font-weight:bold">Individu Butuh Jalur Belajar Terstruktur</p>
+                        </div>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+                        <div class="w-100"></div>
 
-      <div class="container">
-
-        <div class="row gy-3">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about-img.svg" alt="" class="img-fluid">
-          </div>
-
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <div class="about-content ps-0 ps-lg-3">
-              <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-              <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li>
-                  <i class="bi bi-diagram-3"></i>
-                  <div>
-                    <h4>Ullamco laboris nisi ut aliquip consequat</h4>
-                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bi bi-fullscreen-exit"></i>
-                  <div>
-                    <h4>Magnam soluta odio exercitationem reprehenderi</h4>
-                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                  </div>
-                </li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum
-              </p>
+                        <!-- Box 03 -->
+                        <div class="col-6 col-sm-5 text-center mb-4">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h3 style="font-family: Arial, Helvetica, sans-serif; font-weight:bold; color:#003B73; margin-right: 10px;">03</h3>
+                                <i class="fas fa-thin fa-rocket" style="color: #FF7A41; font-size:100px"></i>
+                            </div>
+                            <p style="font-size: 14px; margin-top: 10px;font-weight:bold">Profesional yang ingin Upgrade</p>
+                        </div>
+                        <!-- Box 04 -->
+                        <div class="col-6 col-sm-5 text-center mb-4">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h3 style="font-family: Arial, Helvetica, sans-serif; font-weight:bold; color:#003B73; margin-right: 10px;">04</h3>
+                                <i class="fas fa-thin fa-building" style="color: #FF7A41; font-size:100px"></i>
+                            </div>
+                            <p style="font-size: 14px; margin-top: 10px;font-weight:bold">Profesional Cari Pengalaman Magang</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Content: Image -->
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/techbridge/join.png" alt="Hero Image" class="img-fluid" style="max-width: 100%;">
+                </div>
             </div>
-
-          </div>
         </div>
+    </section>    
 
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+    <section class="popular-courses">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #003B73; font-weight:bold">
+                Kursus <span style="color: #FF7A41;">Populer</span>
+            </h2>
+            <div class="row justify-content-center text-center">
+                <!-- Course Card -->
+                <div class="col-md-3 mb-4">
+                    <div class="course-card">
+                        <div class="inner-card">
+                            <img src="assets/img/techbridge/DS.png" alt="Software Engineering" class="course-image">
+                        </div>
+                        <div class="info-box">
+                            <h5>Software Engineering</h5>
+                            <p style="font-size: 12px;">Mulai perjalanan Anda sebagai pengembang perangkat lunak dengan memahami dasar - dasar pemograman dan pengembangan aplikasi.</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="details-box">
+                            <p>Pemula</p>
+                        </div>
+                        <div class="details-box">
+                            <p>6 Minggu</p>
+                        </div>
+                    </div>
+                    <a href="#" class="primary-btn">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="course-card">
+                        <div class="inner-card">
+                            <img src="assets/img/techbridge/DS.png" alt="Software Engineering" class="course-image">
+                        </div>
+                        <div class="info-box">
+                            <h5>Data Science</h5>
+                            <p style="font-size: 12px;">Pelajari konsep dasar analitik data dan penerapan pembelajaran mesin untuk memulai karir Anda di Data Science.</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="details-box">
+                            <p>Pemula</p>
+                        </div>
+                        <div class="details-box">
+                            <p>8 Minggu</p>
+                        </div>
+                    </div>
+                    <a href="#" class="primary-btn">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="course-card">
+                        <div class="inner-card">
+                            <img src="assets/img/techbridge/DS.png" alt="Software Engineering" class="course-image">
+                        </div>
+                        <div class="info-box">
+                            <h5>UI/UX Design</h5>
+                            <p style="font-size: 12px;">
+                                Sumber Terbuka untuk kerangka kerja frontend JavaScript untuk membangun antarmuka pengguna & aplikasi halaman tunggal.</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="details-box">
+                            <p>Pemula</p>
+                        </div>
+                        <div class="details-box">
+                            <p>6 Minggu</p>
+                        </div>
+                    </div>
+                    <a href="#" class="primary-btn">Pelajari Lebih Lanjut</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="course-card">
+                        <div class="inner-card">
+                            <img src="assets/img/techbridge/DS.png" alt="Software Engineering" class="course-image">
+                        </div>
+                        <div class="info-box">
+                            <h5>DeOps</h5>
+                            <p style="font-size: 12px;">Pelajari prinsip dasar DevOps, automasi dan integrasi untuk meningkatkan pengembangan dan pengiriman perangkat lunak.</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="details-box">
+                            <p>Pemula</p>
+                        </div>
+                        <div class="details-box">
+                            <p>8 Minggu</p>
+                        </div>
+                    </div>
+                    <a href="#" class="primary-btn">Pelajari Lebih Lanjut</a>
+                </div>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div><!-- End Service Item -->
-
         </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Clients</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
+    </section>
+
+    <section class="mentors-section">
+        <div class="container">
+            <h2 class="text-left mb-5" style="margin-left: 50px; font-weight:bold; color:#003B73">
+                Temui Profesional Kami<br>
+                <span style="color:#FF7A41; font-weight:bold">Mentor & Pelatih</span>
+            </h2>
+            <div class="row">
+                <!-- Mentor Card 1 -->
                 <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                    <div class="mentor-card">
+                        <div class="badge">Best Trainer</div>
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/techbridge/M1.png" alt="Sandeep" class="mentor-avatar">
+                            <div class="ms-3">
+                                <h5 class="mentor-name">Sandeep</h5>
+                                <p class="mentor-role">Software Engineer</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐⭐ <span>(72 Reviews)</span>
+                                </div>
+                                <div class="details">
+                                    <span>39 Modules</span> | <span>375 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mentor-description">
+                            Sandeep adalah Pengembang Perangkat Lunak yang ahli dalam .NET & Azure selama lebih dari 24 tahun dan melatih 100 siswa untuk mencapai tujuan & impian mereka.
+                        </p>
+                    </div>
                 </div>
-
+                <!-- Mentor Card 2 -->
                 <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                    <div class="mentor-card">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/img/techbridge/M2.png" alt="Sudhansu" class="mentor-avatar">
+                            <div class="ms-3">
+                                <h5 class="mentor-name">Sudhansu</h5>
+                                <p class="mentor-role">Data Scientist</p>
+                                <div class="rating">
+                                    ⭐⭐⭐⭐ <span>(38 Reviews)</span>
+                                </div>
+                                <div class="details">
+                                    <span>27 Modules</span> | <span>169 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mentor-description">
+                            Sudhansu adalah Pengembang Perangkat Lunak yang ahli dalam Keamanan Cloud, Keamanan Cyber, Pusat Data & Forensik selama lebih dari 22 tahun dan melatih 100 siswa untuk mencapai tujuan & impian mereka.
+                        </p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+    <!-- Partnerships -->
+    <section class="partnerships">
+        <div class="container text-center">
+            <h2 class="text-center mb-5" style="color:#003B73; font-weight:bold">Kemitraan Kami</h2>
+            <img src="assets/img/techbridge/aws.png" alt="AWS" class="partner-logo">
+            <img src="assets/img/techbridge/GC.png" alt="Cloud" class="partner-logo">
+            <img src="assets/img/techbridge/Figma.png" alt="Figma" class="partner-logo">
+            <img src="assets/img/techbridge/Azure.png" alt="Azure" class="partner-logo">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Description -->
+                <div class="col-lg-6 d-flex flex-column">
+                    <img src="assets/img/techbridge/logo.png" alt="TechBridge Logo" class="footer-logo" style="width: 150px;">
+                    <p style="margin-top: 10px;">Connecting Learning, Skills, and Real-World Experience for Your Tech Career</p>
+                    <div class="newsletter-form" style="margin-top: 20px;">
+                        <h5 style="font-size: 16px; font-weight:bold">Subscribe Our Newsletter</h5>
+                        <div class="input-group" style="margin-top: 10px; max-width: 400px;">
+                            <input type="email" class="form-control newsletter-input" placeholder="Your Email address">
+                            <button class="newsletter-btn" style="background-color: #FF7A41; border: none; padding: 10px 20px; color: #fff; border-radius: 4px;">&gt;</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                <!-- Menu Links -->
+                <div class="col-lg-3">
+                    <h5 style="color: #FF7A41; font-weight: bold;">Menu</h5>
+                    <ul class="footer-links" style="list-style: none; padding: 0; margin-top: 20px;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: #fff; text-decoration: none;">Internship</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: #fff; text-decoration: none;">Learning Module</a></li>
+                        <li style="margin-bottom: 10px;"><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: #fff; text-decoration: none;">About</a></li>
+                    </ul>
                 </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                <!-- Contact Info -->
+                <div class="col-lg-3 text-lg-start text-start">
+                    <h5 style="font-weight: bold;">Contact <span style="color: #FF7A41;">Us</span></h5>
+                    <p style="margin-top: 20px;">Yogyakarta, Indonesia</p>
+                    <p><a href="mailto:info@techbridge.id" style="color: #fff; text-decoration: none;">info@techbridge.id</a></p>
+                    <p><a href="tel:+628428448993" style="color: #fff; text-decoration: none;">+62 8428448993</a></p>
                 </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
+            </div>
+            <div class="row mt-4" style="margin-top: 40px;">
+                <div class="col-md-6">
+                    <div class="terms-privacy" style="display: flex; gap: 10px;">
+                        <p style="margin: 0;">Terms & Conditions</p>
+                        <p style="margin-left: 50px;">Privacy Policy</p>
+                    </div>                    
+                </div>
+                <div class="col-md-6 text-start">
+                    <div class="social-links" style="display: flex; justify-content: flex-end; gap: 10px;">
+                        <a href="#" style="color: #fff;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="color: #fff;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #fff;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #fff;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="color: #fff;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </footer>
 
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Ninestars</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ninestars</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
-
 </html>
